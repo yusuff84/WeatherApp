@@ -36,7 +36,7 @@ public class WeatherAdapter extends RecyclerView.Adapter<WeatherAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(WeatherAdapter.ViewHolder holder, int position) {
-        holder.temperatureWeatherTv.setText("Температура воздуха: " + String.valueOf(weatherCities.getList().get(position).getMain().getTemp()) + " K");
+        holder.temperatureWeatherTv.setText("Температура воздуха: " + String.valueOf((Math.floor(weatherCities.getList().get(position).getMain().getTemp())-273)) + " С°");
         holder.datewWeatherTv.setText("Дата: " + weatherCities.getList().get(position).getDtTxt());
         holder.windWeatherTv.setText("Скорость ветра: " + String.valueOf(weatherCities.getList().get(position).getWind().getSpeed()) + " м/c");
     }

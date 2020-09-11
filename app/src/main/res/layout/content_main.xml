@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/darker_gray" />
+
+    <ImageView
+        android:id="@+id/logoBaseDate"
+        android:layout_width="389dp"
+        android:layout_height="242dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp" />
+
+    <LinearLayout
+        android:id="@+id/thither_city_ll"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:clickable="true"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/thither_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ekaterinburg"
+            android:textColor="@android:color/widget_edittext_dark" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray" />
+
+        <ImageView
+            android:id="@+id/trade_city_btn"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="9"
+            android:background="@drawable/exchange"
+            android:clickable="true" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/back_city_ll"
+
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/back_city_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Moscow"
+            android:textColor="@android:color/widget_edittext_dark" />
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/darker_gray" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:id="@+id/thither_date_ll"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/thither_string_content_main"
+                android:textColor="@android:color/widget_edittext_dark"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/date_thither"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Введите дату"
+                android:textColor="@android:color/widget_edittext_dark"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/back_date_ll"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/back_string_tv_main"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/date_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="17 февр.,пт"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/back_invisible_btn"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/back_date_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@android:color/holo_red_dark"
+            android:drawableLeft="@drawable/icn_booking_add"
+            android:drawablePadding="5dp"
+            android:padding="5dp"
+            android:text="обратно"
+            android:textColor="@android:color/white"
+            android:textSize="10dp" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/next_weather_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:background="@android:color/holo_red_dark"
+            android:text="Посмотреть погоду"
+            android:textColor="@android:color/white"
+            android:textSize="10dp" />
+    </RelativeLayout>
+
+
+</LinearLayout>

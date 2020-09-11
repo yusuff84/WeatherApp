@@ -48,7 +48,7 @@ public class WeatherActivity extends AppCompatActivity {
         thitherCityToolbarTv.setText(cityThither);
 
 
-        String Titles[] = {"Ekaterinburg", "Moscow"};
+        String Titles[] = {cityThither, cityBack};
         String cityNames[] = {cityThither, cityBack};
 
 

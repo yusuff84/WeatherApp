@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
@@ -25,7 +26,7 @@
     <LinearLayout
         android:id="@+id/thither_city_ll"
         style="?android:attr/borderlessButtonStyle"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
@@ -33,12 +34,15 @@
         android:orientation="vertical">
 
 
-        <TextView
+        <EditText
             android:id="@+id/thither_city"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="#00F80C0C"
             android:text="Ekaterinburg"
-            android:textColor="@android:color/widget_edittext_dark" />
+            android:textColor="@android:color/widget_edittext_dark"
+            android:textSize="24sp"
+            tools:text="Ekaterinburg" />
 
     </LinearLayout>
 
@@ -71,9 +75,10 @@
         android:id="@+id/back_city_ll"
 
         style="?android:attr/borderlessButtonStyle"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:backgroundTint="#FFFFFF"
         android:orientation="vertical">
 
 
@@ -82,7 +87,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Moscow"
-            android:textColor="@android:color/widget_edittext_dark" />
+            android:textColor="@android:color/widget_edittext_dark"
+            android:textSize="24sp" />
 
     </LinearLayout>
 
@@ -100,6 +106,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:background="#EC0909"
         android:orientation="horizontal">
 
 
@@ -118,7 +125,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/thither_string_content_main"
-                android:textColor="@android:color/widget_edittext_dark"
+                android:textColor="@android:color/white"
                 android:textSize="10dp" />
 
             <TextView
@@ -126,7 +133,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Введите дату"
-                android:textColor="@android:color/widget_edittext_dark"
+                android:textColor="@android:color/white"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -172,9 +179,18 @@
         </LinearLayout>
 
         <Button
+            android:id="@+id/button"
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:clickable="false"
+            android:cursorVisible="false" />
+
+        <Button
             android:id="@+id/back_date_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:background="@android:color/holo_red_dark"
             android:drawableLeft="@drawable/icn_booking_add"
@@ -201,6 +217,7 @@
             android:text="Посмотреть погоду"
             android:textColor="@android:color/white"
             android:textSize="10dp" />
+
     </RelativeLayout>
 
 

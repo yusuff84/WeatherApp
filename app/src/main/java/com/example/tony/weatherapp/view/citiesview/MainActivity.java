@@ -12,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -39,6 +40,10 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
 
     final String THITHER_CITY = "thither";
     final String BACK_CITY = "back";
+
+    String nameCity = "";
+    EditText et_inpput_city;
+
     @BindView(R.id.date_thither)
     TextView thitherDateTv;
     @BindView(R.id.date_back)
@@ -72,6 +77,8 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         Toolbar toolbar = (Toolbar) findViewById(R.id.custom_toolbar_main);
+
+        et_inpput_city = (EditText) findViewById(R.id.thither_city);
 
         calendar = Calendar.getInstance();
 
@@ -110,6 +117,10 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
     }
 
 
+//    public void Apply(View view)
+//    {
+//        nameCity = et_inpput_city.getText().toString();
+//    }
 
     public void showLogo(final List<Image> images){
                 int random  = 0 + (int)(Math.random() * ((2 - 0) + 1));
@@ -125,6 +136,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
 
     @OnClick(R.id.thither_date_ll)
     public void showDatePickerThither(View view) {
+        nameCity = et_inpput_city.getText().toString();
         datePickerDialogThither = new DatePickerDialog(
                 MainActivity.this, MainActivity.this, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH),
                 calendar.get(Calendar.DAY_OF_MONTH));
@@ -134,6 +146,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
 
     @OnClick(R.id.back_date_ll)
     public void showDatePickerBack(View view) {
+        nameCity = et_inpput_city.getText().toString();
         datePickerDialogBack = new DatePickerDialog(
                 MainActivity.this, MainActivity.this, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH),
                 calendar.get(Calendar.DAY_OF_MONTH));
@@ -193,7 +206,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
 
     public void loadNamesCity() {
         sharedPreferences = getPreferences(MODE_PRIVATE);
-        thitherCityName = sharedPreferences.getString(THITHER_CITY, "Ekaterinburg");
+        thitherCityName = sharedPreferences.getString(THITHER_CITY, nameCity);
         backCityName = sharedPreferences.getString(BACK_CITY, "Moscow");
         if (thitherCityName != null) {
             thitherCityTv.setText(thitherCityName);
